@@ -1,0 +1,465 @@
+.bg-primary {
+    background-color: #3B82F6;
+}
+
+.text-primary {
+    color: #3B82F6;
+}
+
+.bg-secondary {
+    background-color: #172B4D;
+}
+
+.gradient-bg {
+    background: linear-gradient(90deg, #3B82F6 0%, #2563EB 100%);
+}
+
+.countdown-timer {
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+}
+
+.shadow-custom {
+    box-shadow: 0 10px 25px -5px rgba(59, 130, 246, 0.25);
+}
+
+/* Animações principais */
+@keyframes floatUp {
+    0% {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRight {
+    0% {
+        transform: translateX(50px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeScale {
+    0% {
+        transform: scale(0.95);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -200% 0;
+    }
+
+    100% {
+        background-position: 200% 0;
+    }
+}
+
+@keyframes wave {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Animação de cartão "flutuante" */
+.float-card {
+    transition: all 0.3s ease;
+}
+
+.float-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 25px -5px rgba(59, 130, 246, 0.35);
+}
+
+/* Animação de brilho para CTA */
+.shine-button {
+    position: relative;
+    overflow: hidden;
+}
+
+.shine-button:after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    bottom: -50%;
+    left: -50%;
+    background: linear-gradient(to bottom, rgba(229, 172, 142, 0), rgba(255, 255, 255, 0.5) 50%, rgba(229, 172, 142, 0));
+    transform: rotateZ(60deg) translate(-5em, 7.5em);
+    animation: shine 3s infinite;
+    animation-delay: .5s;
+}
+
+@keyframes shine {
+    0% {
+        transform: rotateZ(60deg) translate(-5em, 7.5em);
+    }
+
+    100% {
+        transform: rotateZ(60deg) translate(15em, -10em);
+    }
+}
+
+/* Animação para o background com gradiente em movimento */
+.animated-gradient {
+    background: linear-gradient(-45deg, #3B82F6, #2563EB, #1D4ED8, #3B82F6);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+}
+
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Animações para contadores */
+.counter-animate {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.8s ease;
+}
+
+.counter-animate.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Efeito de partículas flutuantes (simulação) */
+.particles-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.particle {
+    position: absolute;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.3);
+    pointer-events: none;
+}
+
+/* Animação para elementos scroll-triggered */
+.reveal {
+    position: relative;
+    opacity: 0;
+    transition: all 0.8s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+}
+
+.active.fade-bottom {
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.active.fade-left {
+    animation: fadeInLeft 1s ease-in-out;
+}
+
+.active.fade-right {
+    animation: fadeInRight 1s ease-in-out;
+}
+
+@keyframes fadeInUp {
+    0% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInLeft {
+    0% {
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInRight {
+    0% {
+        transform: translateX(50px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Animação para cards de depoimentos */
+.testimonial-card {
+    transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: pointer;
+}
+
+.testimonial-card:hover {
+    transform: scale(1.03) rotate(1deg);
+}
+
+/* Menu mobile com animação */
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    height: 100vh;
+    background-color: white;
+    z-index: 1000;
+    transition: right 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.mobile-menu.open {
+    right: 0;
+}
+
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s ease;
+}
+
+.menu-overlay.open {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Efeito de flying icons */
+.flying-icons {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.flying-icon {
+    position: absolute;
+    color: rgba(59, 130, 246, 0.2);
+    animation: fly linear infinite;
+}
+
+@keyframes fly {
+    0% {
+        transform: translateY(100vh) scale(0);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    90% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-100vh) scale(1.5);
+        opacity: 0;
+    }
+}
+
+/* Efeito de números pulsantes */
+.pulse-number {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Estilo para scroll suave */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Loading spinner animado */
+.loading-spinner {
+    width: 40px;
+    height: 40px;
+    margin: 0 auto;
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: #3B82F6;
+    animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Efeito de marca d'água com logos de parceiros */
+.logo-watermark {
+    opacity: 0.05;
+    filter: grayscale(100%);
+    transition: all 0.5s ease;
+}
+
+.logo-watermark:hover {
+    opacity: 1;
+    filter: grayscale(0%);
+}
+
+/* Botões com animação de clique */
+.animated-button {
+    transition: all 0.2s;
+}
+
+.animated-button:active {
+    transform: scale(0.95);
+}
+
+/* Animação para ondas */
+@keyframes wave {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(10px);
+    }
+}
+
+/* Animação de flutuação para partículas */
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0) translateX(0);
+    }
+
+    25% {
+        transform: translateY(-15px) translateX(15px);
+    }
+
+    50% {
+        transform: translateY(-25px) translateX(0);
+    }
+
+    75% {
+        transform: translateY(-15px) translateX(-15px);
+    }
+}
+
+@keyframes animate-gradient-x {
+
+    0%,
+    100% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+.animate-gradient-x {
+    background-size: 200% 200%;
+    animation: animate-gradient-x 15s ease infinite;
+}
+
+.bg-pattern {
+    background-image: radial-gradient(circle, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+    background-size: 20px 20px;
+}
+
+.animation-delay-2000 {
+    animation-delay: 2s;
+}
+
+.animation-delay-4000 {
+    animation-delay: 4s;
+}
+
+@keyframes blob {
+    0% {
+        transform: translate(0px, 0px) scale(1);
+    }
+
+    33% {
+        transform: translate(30px, -50px) scale(1.1);
+    }
+
+    66% {
+        transform: translate(-20px, 20px) scale(0.9);
+    }
+
+    100% {
+        transform: translate(0px, 0px) scale(1);
+    }
+}
+
+.animate-blob {
+    animation: blob 7s infinite;
+}
