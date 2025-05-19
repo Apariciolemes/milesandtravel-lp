@@ -9,7 +9,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <!-- Importando AOS (Animate On Scroll) -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
-    
+
     <style>
         .bg-primary {
             background-color: #3B82F6;
@@ -35,24 +35,26 @@
         .shadow-custom {
             box-shadow: 0 10px 25px -5px rgba(59, 130, 246, 0.25);
         }
-        
+
         /* Animações principais */
         @keyframes floatUp {
             0% {
                 transform: translateY(20px);
                 opacity: 0;
             }
+
             100% {
                 transform: translateY(0);
                 opacity: 1;
             }
         }
-        
+
         @keyframes slideInRight {
             0% {
                 transform: translateX(50px);
                 opacity: 0;
             }
+
             100% {
                 transform: translateX(0);
                 opacity: 1;
@@ -64,49 +66,53 @@
                 transform: scale(0.95);
                 opacity: 0;
             }
+
             100% {
                 transform: scale(1);
                 opacity: 1;
             }
         }
-        
+
         @keyframes shimmer {
             0% {
                 background-position: -200% 0;
             }
+
             100% {
                 background-position: 200% 0;
             }
         }
-        
+
         @keyframes wave {
             0% {
                 transform: translateY(0);
             }
+
             50% {
                 transform: translateY(-15px);
             }
+
             100% {
                 transform: translateY(0);
             }
         }
-        
+
         /* Animação de cartão "flutuante" */
         .float-card {
             transition: all 0.3s ease;
         }
-        
+
         .float-card:hover {
             transform: translateY(-10px);
             box-shadow: 0 20px 25px -5px rgba(59, 130, 246, 0.35);
         }
-        
+
         /* Animação de brilho para CTA */
         .shine-button {
             position: relative;
             overflow: hidden;
         }
-        
+
         .shine-button:after {
             content: '';
             position: absolute;
@@ -114,40 +120,43 @@
             right: -50%;
             bottom: -50%;
             left: -50%;
-            background: linear-gradient(to bottom, rgba(229, 172, 142, 0), rgba(255,255,255,0.5) 50%, rgba(229, 172, 142, 0));
+            background: linear-gradient(to bottom, rgba(229, 172, 142, 0), rgba(255, 255, 255, 0.5) 50%, rgba(229, 172, 142, 0));
             transform: rotateZ(60deg) translate(-5em, 7.5em);
             animation: shine 3s infinite;
             animation-delay: .5s;
         }
-        
+
         @keyframes shine {
             0% {
                 transform: rotateZ(60deg) translate(-5em, 7.5em);
             }
+
             100% {
                 transform: rotateZ(60deg) translate(15em, -10em);
             }
         }
-        
+
         /* Animação para o background com gradiente em movimento */
         .animated-gradient {
             background: linear-gradient(-45deg, #3B82F6, #2563EB, #1D4ED8, #3B82F6);
             background-size: 400% 400%;
             animation: gradientBG 15s ease infinite;
         }
-        
+
         @keyframes gradientBG {
             0% {
                 background-position: 0% 50%;
             }
+
             50% {
                 background-position: 100% 50%;
             }
+
             100% {
                 background-position: 0% 50%;
             }
         }
-        
+
         /* Animações para contadores */
         .counter-animate {
             display: inline-block;
@@ -155,12 +164,12 @@
             transform: translateY(10px);
             transition: all 0.8s ease;
         }
-        
+
         .counter-animate.visible {
             opacity: 1;
             transform: translateY(0);
         }
-        
+
         /* Efeito de partículas flutuantes (simulação) */
         .particles-container {
             position: absolute;
@@ -171,80 +180,83 @@
             overflow: hidden;
             z-index: 0;
         }
-        
+
         .particle {
             position: absolute;
             border-radius: 50%;
             background-color: rgba(255, 255, 255, 0.3);
             pointer-events: none;
         }
-        
+
         /* Animação para elementos scroll-triggered */
         .reveal {
             position: relative;
             opacity: 0;
             transition: all 0.8s ease;
         }
-        
+
         .reveal.active {
             opacity: 1;
         }
-        
+
         .active.fade-bottom {
             animation: fadeInUp 1s ease-in-out;
         }
-        
+
         .active.fade-left {
             animation: fadeInLeft 1s ease-in-out;
         }
-        
+
         .active.fade-right {
             animation: fadeInRight 1s ease-in-out;
         }
-        
+
         @keyframes fadeInUp {
             0% {
                 transform: translateY(50px);
                 opacity: 0;
             }
+
             100% {
                 transform: translateY(0);
                 opacity: 1;
             }
         }
-        
+
         @keyframes fadeInLeft {
             0% {
                 transform: translateX(-50px);
                 opacity: 0;
             }
+
             100% {
                 transform: translateX(0);
                 opacity: 1;
             }
         }
-        
+
         @keyframes fadeInRight {
             0% {
                 transform: translateX(50px);
                 opacity: 0;
             }
+
             100% {
                 transform: translateX(0);
                 opacity: 1;
             }
         }
-        
+
         /* Animação para cards de depoimentos */
         .testimonial-card {
             transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             cursor: pointer;
         }
-        
+
         .testimonial-card:hover {
             transform: scale(1.03) rotate(1deg);
         }
-        
+
         /* Menu mobile com animação */
         .mobile-menu {
             position: fixed;
@@ -258,11 +270,11 @@
             box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
             padding: 20px;
         }
-        
+
         .mobile-menu.open {
             right: 0;
         }
-        
+
         .menu-overlay {
             position: fixed;
             top: 0;
@@ -275,12 +287,12 @@
             visibility: hidden;
             transition: all 0.5s ease;
         }
-        
+
         .menu-overlay.open {
             opacity: 1;
             visibility: visible;
         }
-        
+
         /* Efeito de flying icons */
         .flying-icons {
             position: absolute;
@@ -292,52 +304,57 @@
             pointer-events: none;
             z-index: 1;
         }
-        
+
         .flying-icon {
             position: absolute;
             color: rgba(59, 130, 246, 0.2);
             animation: fly linear infinite;
         }
-        
+
         @keyframes fly {
             0% {
                 transform: translateY(100vh) scale(0);
                 opacity: 0;
             }
+
             10% {
                 opacity: 1;
             }
+
             90% {
                 opacity: 1;
             }
+
             100% {
                 transform: translateY(-100vh) scale(1.5);
                 opacity: 0;
             }
         }
-        
+
         /* Efeito de números pulsantes */
         .pulse-number {
             animation: pulse 2s infinite;
         }
-        
+
         @keyframes pulse {
             0% {
                 transform: scale(1);
             }
+
             50% {
                 transform: scale(1.05);
             }
+
             100% {
                 transform: scale(1);
             }
         }
-        
+
         /* Estilo para scroll suave */
         html {
             scroll-behavior: smooth;
         }
-        
+
         /* Loading spinner animado */
         .loading-spinner {
             width: 40px;
@@ -348,30 +365,30 @@
             border-top-color: #3B82F6;
             animation: spin 1s ease-in-out infinite;
         }
-        
+
         @keyframes spin {
             to {
                 transform: rotate(360deg);
             }
         }
-        
+
         /* Efeito de marca d'água com logos de parceiros */
         .logo-watermark {
             opacity: 0.05;
             filter: grayscale(100%);
             transition: all 0.5s ease;
         }
-        
+
         .logo-watermark:hover {
             opacity: 1;
             filter: grayscale(0%);
         }
-        
+
         /* Botões com animação de clique */
         .animated-button {
             transition: all 0.2s;
         }
-        
+
         .animated-button:active {
             transform: scale(0.95);
         }
@@ -387,21 +404,25 @@
             </div>
             <nav class="hidden md:block">
                 <ul class="flex space-x-6">
-                    <li><a href="#como-funciona" class="hover:text-primary transition-colors" data-aos="fade-down" data-aos-delay="100">Como Funciona</a></li>
-                    <li><a href="#beneficios" class="hover:text-primary transition-colors" data-aos="fade-down" data-aos-delay="200">Benefícios</a></li>
-                    <li><a href="#depoimentos" class="hover:text-primary transition-colors" data-aos="fade-down" data-aos-delay="300">Depoimentos</a></li>
+                    <li><a href="#como-funciona" class="hover:text-primary transition-colors" data-aos="fade-down"
+                            data-aos-delay="100">Como Funciona</a></li>
+                    <li><a href="#beneficios" class="hover:text-primary transition-colors" data-aos="fade-down"
+                            data-aos-delay="200">Benefícios</a></li>
+                    <li><a href="#depoimentos" class="hover:text-primary transition-colors" data-aos="fade-down"
+                            data-aos-delay="300">Depoimentos</a></li>
                 </ul>
             </nav>
             <div>
                 <a href="#cadastro"
-                    class="hidden md:inline-block bg-primary hover:bg-blue-600 text-white font-semibold px-6 py-2 rounded-full transition-colors shadow-sm shine-button animated-button" data-aos="fade-left" data-aos-delay="400">Começar
+                    class="hidden md:inline-block bg-primary hover:bg-blue-600 text-white font-semibold px-6 py-2 rounded-full transition-colors shadow-sm shine-button animated-button"
+                    data-aos="fade-left" data-aos-delay="400">Começar
                     Agora</a>
                 <button class="md:hidden text-gray-600" id="mobile-menu-button">
                     <i class="fas fa-bars text-xl"></i>
                 </button>
             </div>
         </div>
-        
+
         <!-- Menu mobile -->
         <div class="mobile-menu" id="mobile-menu">
             <div class="flex justify-between items-center mb-8">
@@ -415,7 +436,9 @@
                 <li><a href="#beneficios" class="block py-2 text-lg">Benefícios</a></li>
                 <li><a href="#depoimentos" class="block py-2 text-lg">Depoimentos</a></li>
                 <li class="mt-8">
-                    <a href="#cadastro" class="block w-full bg-primary text-white font-semibold px-6 py-3 rounded-full text-center shine-button animated-button">Começar Agora</a>
+                    <a href="#cadastro"
+                        class="block w-full bg-primary text-white font-semibold px-6 py-3 rounded-full text-center shine-button animated-button">Começar
+                        Agora</a>
                 </li>
             </ul>
         </div>
@@ -426,7 +449,7 @@
     <section class="relative animated-gradient py-16 md:py-24 overflow-hidden">
         <!-- Partículas animadas -->
         <div class="particles-container" id="particles-container"></div>
-        
+
         <!-- Ícones voadores -->
         <div class="flying-icons">
             <i class="fas fa-plane flying-icon" style="font-size: 24px;"></i>
@@ -435,7 +458,7 @@
             <i class="fas fa-money-bill-wave flying-icon" style="font-size: 22px;"></i>
             <i class="fas fa-percentage flying-icon" style="font-size: 26px;"></i>
         </div>
-        
+
         <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
             <div class="md:w-1/2 text-white mb-10 md:mb-0" data-aos="fade-right" data-aos-duration="1000">
                 <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">Você está perdendo dinheiro todos os dias e
@@ -444,14 +467,16 @@
                     — em tempo real — nas maiores plataformas de milhas e cashback.</p>
                 <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
                     <a href="#cadastro"
-                        class="bg-white text-primary hover:bg-gray-100 font-bold px-8 py-3 rounded-full text-center transition-colors shadow-lg shine-button animated-button pointer" data-aos="zoom-in" data-aos-delay="300">Comece
+                        class="bg-white text-primary hover:bg-gray-100 font-bold px-8 py-3 rounded-full text-center transition-colors shadow-lg shine-button animated-button pointer"
+                        data-aos="zoom-in" data-aos-delay="300">Comece
                         Agora</a>
                     <a href="#como-funciona"
-                        class="border-2 border-white text-white hover:bg-white hover:text-primary font-bold px-8 py-3 rounded-full text-center transition-colors animated-button cursor-pointer" data-aos="zoom-in" data-aos-delay="500">Saiba
+                        class="border-2 border-white text-white hover:bg-white hover:text-primary font-bold px-8 py-3 rounded-full text-center transition-colors animated-button cursor-pointer"
+                        data-aos="zoom-in" data-aos-delay="500">Saiba
                         Mais</a>
                 </div>
             </div>
-            
+
         </div>
 
         <!-- Wave overlay com animação -->
@@ -474,8 +499,10 @@
             </div>
 
             <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white p-6 rounded-lg shadow-custom text-center float-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="inline-block p-4 rounded-full bg-blue-100 mb-4 transform transition-transform hover:rotate-12 duration-300">
+                <div class="bg-white p-6 rounded-lg shadow-custom text-center float-card" data-aos="fade-up"
+                    data-aos-delay="100">
+                    <div
+                        class="inline-block p-4 rounded-full bg-blue-100 mb-4 transform transition-transform hover:rotate-12 duration-300">
                         <i class="fas fa-search text-2xl text-primary"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-3">Monitoramento em tempo real</h3>
@@ -483,8 +510,10 @@
                         principais plataformas de milhas e cashback.</p>
                 </div>
 
-                <div class="bg-white p-6 rounded-lg shadow-custom text-center float-card" data-aos="fade-up" data-aos-delay="300">
-                    <div class="inline-block p-4 rounded-full bg-blue-100 mb-4 transform transition-transform hover:rotate-12 duration-300">
+                <div class="bg-white p-6 rounded-lg shadow-custom text-center float-card" data-aos="fade-up"
+                    data-aos-delay="300">
+                    <div
+                        class="inline-block p-4 rounded-full bg-blue-100 mb-4 transform transition-transform hover:rotate-12 duration-300">
                         <i class="fas fa-bell text-2xl text-primary"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-3">Alertas personalizados</h3>
@@ -492,8 +521,10 @@
                         perfil de consumo e preferências.</p>
                 </div>
 
-                <div class="bg-white p-6 rounded-lg shadow-custom text-center float-card" data-aos="fade-up" data-aos-delay="500">
-                    <div class="inline-block p-4 rounded-full bg-blue-100 mb-4 transform transition-transform hover:rotate-12 duration-300">
+                <div class="bg-white p-6 rounded-lg shadow-custom text-center float-card" data-aos="fade-up"
+                    data-aos-delay="500">
+                    <div
+                        class="inline-block p-4 rounded-full bg-blue-100 mb-4 transform transition-transform hover:rotate-12 duration-300">
                         <i class="fas fa-wallet text-2xl text-primary"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-3">Maximize seus benefícios</h3>
@@ -504,62 +535,177 @@
         </div>
     </section>
 
-    <!-- Benefícios com efeito de revelação sequencial -->
-    <section id="beneficios" class="py-16">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-12" data-aos="fade-up">
-                <h2 class="text-3xl font-bold mb-4">Benefícios exclusivos para você</h2>
-                <p class="max-w-2xl mx-auto text-gray-600">Nossa plataforma foi desenvolvida para maximizar seus ganhos
-                    em cada compra.</p>
+    <!-- Benefícios com design premium e elementos visuais impactantes -->
+    <section id="beneficios" class="py-24 relative overflow-hidden bg-gradient-to-br from-gray-50 to-white">
+        <!-- Elementos decorativos de fundo -->
+        <div class="absolute -top-20 -right-20 w-64 h-64 bg-blue-50 rounded-full opacity-50 blur-3xl"></div>
+        <div class="absolute -bottom-20 -left-20 w-80 h-80 bg-indigo-50 rounded-full opacity-50 blur-3xl"></div>
+
+        <div class="container mx-auto px-4 relative z-10">
+            <!-- Cabeçalho com destaque visual -->
+            <div class="text-center mb-16 max-w-3xl mx-auto" data-aos="fade-up">
+                <span
+                    class="inline-block px-4 py-1 rounded-full bg-blue-100 text-blue-700 text-sm font-semibold mb-4">RECURSOS
+                    EXCLUSIVOS</span>
+                <h2
+                    class="text-4xl md:text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-600">
+                    Transforma seus gastos em vantagens reais</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto mb-6"></div>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">Uma plataforma completa desenvolvida por
+                    especialistas em programas de fidelidade que maximiza cada centavo gasto.</p>
             </div>
 
-            <div class="grid md:grid-cols-2 gap-8">
-                <div class="flex items-start reveal fade-left" data-aos="fade-right" data-aos-delay="100">
-                    <div class="mr-4 mt-1">
-                        <i class="fas fa-check-circle text-primary text-xl"></i>
+            <!-- Cards de benefícios com design premium -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+                <!-- Benefício 1 -->
+                <div class="bg-white rounded-xl shadow-xl p-8 transform transition-all duration-300 hover:shadow-2xl hover:-translate-y-2"
+                    data-aos="fade-up" data-aos-delay="100">
+                    <div
+                        class="w-14 h-14 rounded-lg bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center text-white mb-6">
+                        <i class="fas fa-robot text-2xl"></i>
                     </div>
-                    <div>
-                        <h3 class="text-xl font-bold mb-2">Economia inteligente</h3>
-                        <p class="text-gray-600">Compare automaticamente as opções de milhas e cashback para escolher
-                            sempre a melhor alternativa.</p>
-                    </div>
-                </div>
-
-                <div class="flex items-start reveal fade-right" data-aos="fade-left" data-aos-delay="200">
-                    <div class="mr-4 mt-1">
-                        <i class="fas fa-check-circle text-primary text-xl"></i>
-                    </div>
-                    <div>
-                        <h3 class="text-xl font-bold mb-2">Parcerias exclusivas</h3>
-                        <p class="text-gray-600">Acesso a ofertas especiais e taxas diferenciadas em parceiros
-                            selecionados.</p>
+                    <h3 class="text-xl font-bold mb-3 text-gray-900">Inteligência Artificial</h3>
+                    <p class="text-gray-600 mb-6">Algoritmo avançado que analisa mais de 150 programas de fidelidade
+                        para identificar as melhores oportunidades.</p>
+                    <div class="pt-4 border-t border-gray-100">
+                        <span class="text-sm text-blue-600 font-medium flex items-center">
+                            <span>Economia média de 22%</span>
+                            <i class="fas fa-arrow-trend-up ml-2"></i>
+                        </span>
                     </div>
                 </div>
 
-                <div class="flex items-start reveal fade-left" data-aos="fade-right" data-aos-delay="300">
-                    <div class="mr-4 mt-1">
-                        <i class="fas fa-check-circle text-primary text-xl"></i>
+                <!-- Benefício 2 -->
+                <div class="bg-white rounded-xl shadow-xl p-8 transform transition-all duration-300 hover:shadow-2xl hover:-translate-y-2"
+                    data-aos="fade-up" data-aos-delay="200">
+                    <div
+                        class="w-14 h-14 rounded-lg bg-gradient-to-br from-indigo-500 to-indigo-600 flex items-center justify-center text-white mb-6">
+                        <i class="fas fa-shield-alt text-2xl"></i>
                     </div>
-                    <div>
-                        <h3 class="text-xl font-bold mb-2">Dashboard simplificado</h3>
-                        <p class="text-gray-600">Visualize todos os seus programas de fidelidade em um único lugar, com
-                            informações claras e atualizadas.</p>
+                    <h3 class="text-xl font-bold mb-3 text-gray-900">Parcerias Premium</h3>
+                    <p class="text-gray-600 mb-6">Acesso a mais de 250 parcerias exclusivas com taxas de conversão
+                        especiais e bônus disponíveis apenas em nossa plataforma.</p>
+                    <div class="pt-4 border-t border-gray-100">
+                        <span class="text-sm text-blue-600 font-medium flex items-center">
+                            <span>45 novas parcerias em 2025</span>
+                            <i class="fas fa-badge-check ml-2"></i>
+                        </span>
                     </div>
                 </div>
 
-                <div class="flex items-start reveal fade-right" data-aos="fade-left" data-aos-delay="400">
-                    <div class="mr-4 mt-1">
-                        <i class="fas fa-check-circle text-primary text-xl"></i>
+                <!-- Benefício 3 -->
+                <div class="bg-white rounded-xl shadow-xl p-8 transform transition-all duration-300 hover:shadow-2xl hover:-translate-y-2"
+                    data-aos="fade-up" data-aos-delay="300">
+                    <div
+                        class="w-14 h-14 rounded-lg bg-gradient-to-br from-purple-500 to-purple-600 flex items-center justify-center text-white mb-6">
+                        <i class="fas fa-bolt text-2xl"></i>
                     </div>
-                    <div>
-                        <h3 class="text-xl font-bold mb-2">Suporte especializado</h3>
-                        <p class="text-gray-600">Conte com nossa equipe para maximizar seus benefícios e esclarecer suas
-                            dúvidas.</p>
+                    <h3 class="text-xl font-bold mb-3 text-gray-900">Alertas em Tempo Real</h3>
+                    <p class="text-gray-600 mb-6">Notificações instantâneas sobre promoções relâmpago e oportunidades
+                        limitadas antes que acabem.</p>
+                    <div class="pt-4 border-t border-gray-100">
+                        <span class="text-sm text-blue-600 font-medium flex items-center">
+                            <span>Antecedência média de 42 minutos</span>
+                            <i class="fas fa-clock ml-2"></i>
+                        </span>
                     </div>
+                </div>
+
+                <!-- Benefício 4 -->
+                <div class="bg-white rounded-xl shadow-xl p-8 transform transition-all duration-300 hover:shadow-2xl hover:-translate-y-2"
+                    data-aos="fade-up" data-aos-delay="400">
+                    <div
+                        class="w-14 h-14 rounded-lg bg-gradient-to-br from-green-500 to-green-600 flex items-center justify-center text-white mb-6">
+                        <i class="fas fa-chart-line text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-900">Dashboard Analítico</h3>
+                    <p class="text-gray-600 mb-6">Visualize todos os seus programas, pontuações e tendências em um
+                        painel personalizado com gráficos interativos.</p>
+                    <div class="pt-4 border-t border-gray-100">
+                        <span class="text-sm text-blue-600 font-medium flex items-center">
+                            <span>Atualização em tempo real</span>
+                            <i class="fas fa-refresh ml-2"></i>
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Benefício 5 -->
+                <div class="bg-white rounded-xl shadow-xl p-8 transform transition-all duration-300 hover:shadow-2xl hover:-translate-y-2"
+                    data-aos="fade-up" data-aos-delay="500">
+                    <div
+                        class="w-14 h-14 rounded-lg bg-gradient-to-br from-red-500 to-red-600 flex items-center justify-center text-white mb-6">
+                        <i class="fas fa-headset text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-900">Consultoria VIP</h3>
+                    <p class="text-gray-600 mb-6">Acesso a especialistas em programas de fidelidade para elaborar
+                        estratégias personalizadas de acúmulo e resgate.</p>
+                    <div class="pt-4 border-t border-gray-100">
+                        <span class="text-sm text-blue-600 font-medium flex items-center">
+                            <span>Suporte 7 dias por semana</span>
+                            <i class="fas fa-user-headset ml-2"></i>
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Benefício 6 -->
+                <div class="bg-white rounded-xl shadow-xl p-8 transform transition-all duration-300 hover:shadow-2xl hover:-translate-y-2"
+                    data-aos="fade-up" data-aos-delay="600">
+                    <div
+                        class="w-14 h-14 rounded-lg bg-gradient-to-br from-yellow-500 to-yellow-600 flex items-center justify-center text-white mb-6">
+                        <i class="fas fa-plane text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-gray-900">Oportunidades Exclusivas</h3>
+                    <p class="text-gray-600 mb-6">Acesso a promoções de primeira classe e upgrades não disponíveis ao
+                        público em geral.</p>
+                    <div class="pt-4 border-t border-gray-100">
+                        <span class="text-sm text-blue-600 font-medium flex items-center">
+                            <span>+480 oportunidades mensais</span>
+                            <i class="fas fa-star ml-2"></i>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Seção destacada com números impressionantes -->
+            <div class="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-10 text-white shadow-xl"
+                data-aos="zoom-in">
+                <div class="grid md:grid-cols-3 gap-8 text-center">
+                    <div class="counter-item">
+                        <div class="text-5xl font-bold mb-2 flex justify-center items-end">
+                            <span class="counter-value" data-target="98">0</span>
+                            <span class="text-3xl">%</span>
+                        </div>
+                        <p class="text-blue-100">Taxa de satisfação dos usuários</p>
+                    </div>
+
+                    <div class="counter-item">
+                        <div class="text-5xl font-bold mb-2 flex justify-center items-end">
+                            <span>R$</span>
+                            <span class="counter-value" data-target="3.2">0</span>
+                            <span class="text-3xl">M+</span>
+                        </div>
+                        <p class="text-blue-100">Economia gerada para clientes</p>
+                    </div>
+
+                    <div class="counter-item">
+                        <div class="text-5xl font-bold mb-2 flex justify-center">
+                            <span class="counter-value" data-target="45">0</span>
+                            <span class="text-3xl">+</span>
+                        </div>
+                        <p class="text-blue-100">Plataformas integradas</p>
+                    </div>
+                </div>
+
+                <div class="mt-10 flex justify-center">
+                    <a href="#cadastro"
+                        class="bg-white text-blue-600 hover:bg-blue-50 font-bold px-8 py-3 rounded-full shine-button shadow-lg transform transition-all duration-300 hover:scale-105">
+                        Comece agora gratuitamente
+                    </a>
                 </div>
             </div>
         </div>
     </section>
+
 
     <!-- Estatísticas com contador animado -->
     <section class="py-16 bg-gray-900 text-white">
@@ -595,7 +741,8 @@
             </div>
 
             <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white p-6 rounded-lg shadow-custom testimonial-card" data-aos="flip-left" data-aos-delay="100">
+                <div class="bg-white p-6 rounded-lg shadow-custom testimonial-card" data-aos="flip-left"
+                    data-aos-delay="100">
                     <div class="flex items-center mb-4">
                         <div class="text-yellow-400 mr-2">
                             <i class="fas fa-star"></i>
@@ -609,7 +756,10 @@
                     <p class="text-gray-600 mb-4">"Consegui acumular pontos suficientes para uma passagem internacional
                         em apenas 3 meses! O radar de oportunidades foi essencial para maximizar minhas compras."</p>
                     <div class="flex items-center">
-                        <img src="/api/placeholder/40/40" alt="Usuário" class="w-10 h-10 rounded-full mr-3">
+                        <div
+                            class="w-12 h-12 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold text-lg shadow-md mr-4">
+                            MS
+                        </div>
                         <div>
                             <h4 class="font-semibold">Marina Santos</h4>
                             <p class="text-sm text-gray-500">Usuária desde 2023</p>
@@ -617,7 +767,8 @@
                     </div>
                 </div>
 
-                <div class="bg-white p-6 rounded-lg shadow-custom testimonial-card" data-aos="flip-left" data-aos-delay="300">
+                <div class="bg-white p-6 rounded-lg shadow-custom testimonial-card" data-aos="flip-left"
+                    data-aos-delay="300">
                     <div class="flex items-center mb-4">
                         <div class="text-yellow-400 mr-2">
                             <i class="fas fa-star"></i>
@@ -631,7 +782,10 @@
                     <p class="text-gray-600 mb-4">"Como empresário, economizei mais de R$15 mil em compras corporativas
                         no último trimestre. A plataforma é intuitiva e as recomendações são certeiras."</p>
                     <div class="flex items-center">
-                        <img src="/api/placeholder/40/40" alt="Usuário" class="w-10 h-10 rounded-full mr-3">
+                        <div
+                            class="w-12 h-12 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold text-lg shadow-md mr-4">
+                            RA
+                        </div>
                         <div>
                             <h4 class="font-semibold">Ricardo Almeida</h4>
                             <p class="text-sm text-gray-500">Empreendedor</p>
@@ -639,7 +793,8 @@
                     </div>
                 </div>
 
-                <div class="bg-white p-6 rounded-lg shadow-custom testimonial-card" data-aos="flip-left" data-aos-delay="500">
+                <div class="bg-white p-6 rounded-lg shadow-custom testimonial-card" data-aos="flip-left"
+                    data-aos-delay="500">
                     <div class="flex items-center mb-4">
                         <div class="text-yellow-400 mr-2">
                             <i class="fas fa-star"></i>
@@ -654,7 +809,10 @@
                         forma de acumular milhas. Os alertas chegam no momento certo e já consegui três upgrades de
                         classe."</p>
                     <div class="flex items-center">
-                        <img src="/api/placeholder/40/40" alt="Usuário" class="w-10 h-10 rounded-full mr-3">
+                        <div
+                            class="w-12 h-12 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold text-lg shadow-md mr-4">
+                            FL
+                        </div>
                         <div>
                             <h4 class="font-semibold">Fernanda Lima</h4>
                             <p class="text-sm text-gray-500">Viajante frequente</p>
@@ -668,81 +826,301 @@
     <!-- Parceiros com animação de logos -->
     <section class="py-12 border-t border-gray-200 overflow-hidden">
         <div class="container mx-auto px-4">
-            <h3 class="text-center text-lg font-semibold text-gray-500 mb-8" data-aos="fade-up">Plataformas parceiras</h3>
+            <h3 class="text-center text-lg font-semibold text-gray-500 mb-8" data-aos="fade-up">Plataformas parceiras
+            </h3>
             <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16 logo-carousel">
                 <div class="partner-logo" data-aos="zoom-in" data-aos-delay="100">
-                    <img src="/api/placeholder/120/40" alt="Parceiro 1" class="h-6 grayscale hover:grayscale-0 transition-all duration-300 transform hover:scale-110">
+                    <img src="/api/placeholder/120/40" alt="Parceiro 1"
+                        class="h-6 grayscale hover:grayscale-0 transition-all duration-300 transform hover:scale-110">
                 </div>
                 <div class="partner-logo" data-aos="zoom-in" data-aos-delay="200">
-                    <img src="/api/placeholder/120/40" alt="Parceiro 2" class="h-6 grayscale hover:grayscale-0 transition-all duration-300 transform hover:scale-110">
+                    <img src="/api/placeholder/120/40" alt="Parceiro 2"
+                        class="h-6 grayscale hover:grayscale-0 transition-all duration-300 transform hover:scale-110">
                 </div>
                 <div class="partner-logo" data-aos="zoom-in" data-aos-delay="300">
-                    <img src="/api/placeholder/120/40" alt="Parceiro 3" class="h-6 grayscale hover:grayscale-0 transition-all duration-300 transform hover:scale-110">
+                    <img src="/api/placeholder/120/40" alt="Parceiro 3"
+                        class="h-6 grayscale hover:grayscale-0 transition-all duration-300 transform hover:scale-110">
                 </div>
                 <div class="partner-logo" data-aos="zoom-in" data-aos-delay="400">
-                    <img src="/api/placeholder/120/40" alt="Parceiro 4" class="h-6 grayscale hover:grayscale-0 transition-all duration-300 transform hover:scale-110">
+                    <img src="/api/placeholder/120/40" alt="Parceiro 4"
+                        class="h-6 grayscale hover:grayscale-0 transition-all duration-300 transform hover:scale-110">
                 </div>
                 <div class="partner-logo" data-aos="zoom-in" data-aos-delay="500">
-                    <img src="/api/placeholder/120/40" alt="Parceiro 5" class="h-6 grayscale hover:grayscale-0 transition-all duration-300 transform hover:scale-110">
+                    <img src="/api/placeholder/120/40" alt="Parceiro 5"
+                        class="h-6 grayscale hover:grayscale-0 transition-all duration-300 transform hover:scale-110">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Formulário de cadastro com animação -->
-    <section id="cadastro" class="py-16 animated-gradient text-white relative overflow-hidden">
+    <!-- Formulário de cadastro premium com elementos de conversão avançados -->
+    <section id="cadastro" class="pt-24 pb-32 relative overflow-hidden">
+        <!-- Background com gradiente animado avançado -->
+        <div class="absolute inset-0 bg-gradient-to-br from-blue-600 via-indigo-700 to-purple-800 animate-gradient-x">
+        </div>
+
+        <!-- Efeito de padrão de pontos -->
+        <div class="absolute inset-0 bg-pattern opacity-10"></div>
+
         <!-- Partículas animadas para o fundo -->
         <div class="particles-container" id="particles-container-2"></div>
-        
+
+        <!-- Formas flutuantes decorativas -->
+        <div
+            class="absolute top-1/4 left-10 w-32 h-32 bg-blue-400 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-blob">
+        </div>
+        <div
+            class="absolute top-1/3 right-10 w-32 h-32 bg-purple-400 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-blob animation-delay-2000">
+        </div>
+        <div
+            class="absolute bottom-1/4 left-1/3 w-32 h-32 bg-indigo-400 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-blob animation-delay-4000">
+        </div>
+
         <div class="container mx-auto px-4 relative z-10">
-            <div class="max-w-2xl mx-auto text-center mb-8" data-aos="fade-up">
-                <h2 class="text-3xl font-bold mb-4">Comece a economizar agora mesmo</h2>
-                <p class="text-lg mb-6">Garanta seu acesso ao radar de oportunidades e transforme cada compra em
-                    recompensas.</p>
+            <!-- Estrelas de avaliação no topo -->
+            <div class="flex justify-center mb-10" data-aos="fade-down" data-aos-delay="100">
+                <div class="bg-white/10 backdrop-blur-md px-6 py-3 rounded-full inline-flex items-center">
+                    <div class="text-yellow-400 flex mr-3">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <span class="text-white text-sm font-medium">Avaliado em 4.9/5 por mais de 3.700 usuários</span>
+                </div>
             </div>
 
-            <div class="max-w-md mx-auto bg-white rounded-lg shadow-lg p-8" data-aos="zoom-in" data-aos-delay="300">
-                <form id="signup-form">
-                    <div class="mb-4 form-field" data-aos="fade-up" data-aos-delay="100">
-                        <label for="nome" class="block text-gray-700 font-medium mb-2">Seu nome</label>
-                        <input type="text" id="nome"
-                            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary transition-all"
-                            placeholder="Digite seu nome">
-                    </div>
+            <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-stretch gap-8">
+                <!-- Coluna de benefícios -->
+                <div class="md:w-1/2 text-white" data-aos="fade-right">
+                    <div class="sticky top-10">
+                        <div class="flex items-center mb-4">
+                            <span
+                                class="inline-block px-3 py-1 bg-white/20 backdrop-blur-md rounded-full text-xs font-semibold text-white mr-3">ACESSO
+                                ESPECIAL</span>
+                            <div class="inline-flex items-center">
+                                <div class="w-2 h-2 bg-green-400 rounded-full animate-pulse mr-2"></div>
+                                <span class="text-xs">500 vagas disponíveis</span>
+                            </div>
+                        </div>
 
-                    <div class="mb-4 form-field" data-aos="fade-up" data-aos-delay="200">
-                        <label for="email" class="block text-gray-700 font-medium mb-2">Seu email</label>
-                        <input type="email" id="email"
-                            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary transition-all"
-                            placeholder="Digite seu melhor email">
-                    </div>
+                        <h2 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">Maximize o poder das suas <span
+                                class="relative">milhas<span
+                                    class="absolute bottom-0 left-0 w-full h-1 bg-yellow-400"></span></span> e <span
+                                class="relative">cashback<span
+                                    class="absolute bottom-0 left-0 w-full h-1 bg-yellow-400"></span></span></h2>
 
-                    <div class="mb-6 form-field" data-aos="fade-up" data-aos-delay="300">
+                        <p class="text-lg text-blue-100 mb-8">Pare de deixar dinheiro na mesa. Junte-se a mais de 10 mil
+                            brasileiros inteligentes que estão economizando em cada compra.</p>
+
+                        <!-- Benefícios destacados -->
+                        <div class="space-y-4 mb-10">
+                            <div class="flex items-start">
+                                <div
+                                    class="flex-shrink-0 w-6 h-6 bg-green-400 rounded-full flex items-center justify-center mt-1 mr-4">
+                                    <i class="fas fa-check text-xs"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-white">Radar 24/7 de oportunidades</h4>
+                                    <p class="text-blue-100">Nunca mais perca uma promoção relâmpago ou bônus especial.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start">
+                                <div
+                                    class="flex-shrink-0 w-6 h-6 bg-green-400 rounded-full flex items-center justify-center mt-1 mr-4">
+                                    <i class="fas fa-check text-xs"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-white">Setup completo em 3 minutos</h4>
+                                    <p class="text-blue-100">Interface intuitiva sem complicações. Comece a economizar
+                                        hoje.</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start">
+                                <div
+                                    class="flex-shrink-0 w-6 h-6 bg-green-400 rounded-full flex items-center justify-center mt-1 mr-4">
+                                    <i class="fas fa-check text-xs"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-white">Acesso ao clube VIP</h4>
+                                    <p class="text-blue-100">Benefícios exclusivos disponíveis apenas para membros.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Social proof -->
                         <div class="flex items-center">
-                            <input type="checkbox" id="termos" class="mr-2 transform scale-125 transition-transform">
-                            <label for="termos" class="text-gray-700 text-sm">Concordo com os <a href="#"
-                                    class="text-primary hover:underline">termos de uso</a> e <a href="#"
-                                    class="text-primary hover:underline">política de privacidade</a>.</label>
+                            <!-- Avatares sobrepostos -->
+                            <div class="flex -space-x-2 mr-4">
+                                <div
+                                    class="w-8 h-8 rounded-full bg-blue-500 border-2 border-white flex items-center justify-center text-white text-xs font-bold">
+                                    MS</div>
+                                <div
+                                    class="w-8 h-8 rounded-full bg-indigo-500 border-2 border-white flex items-center justify-center text-white text-xs font-bold">
+                                    JA</div>
+                                <div
+                                    class="w-8 h-8 rounded-full bg-purple-500 border-2 border-white flex items-center justify-center text-white text-xs font-bold">
+                                    FL</div>
+                                <div
+                                    class="w-8 h-8 rounded-full bg-green-500 border-2 border-white flex items-center justify-center text-white text-xs font-bold">
+                                    RA</div>
+                                <div
+                                    class="w-8 h-8 rounded-full bg-white border-2 border-white flex items-center justify-center text-gray-800 text-xs font-bold">
+                                    +</div>
+                            </div>
+                            <div>
+                                <p class="text-sm text-blue-100"><span class="font-semibold text-white">32
+                                        pessoas</span> se cadastraram nas últimas 24 horas</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Formulário -->
+                <div class="md:w-1/2" data-aos="fade-left">
+                    <div class="bg-white rounded-2xl shadow-2xl overflow-hidden">
+                        <!-- Barra de progresso (opcional para multi-step) -->
+                        <div class="h-1 w-full bg-gray-100">
+                            <div class="h-full bg-gradient-to-r from-blue-500 to-indigo-600 w-full"></div>
+                        </div>
+
+                        <div class="p-8 md:p-10">
+                            <div class="text-center mb-8">
+                                <h3 class="text-2xl font-bold text-gray-800 mb-2">Comece a economizar agora</h3>
+                                <p class="text-gray-600">Crie sua conta gratuitamente em menos de 1 minuto</p>
+                            </div>
+
+                            <form id="signup-form" class="space-y-6">
+                                <!-- Campo de nome com ícone -->
+                                <div class="form-field">
+                                    <label for="nome" class="block text-gray-700 font-medium mb-2">Seu nome</label>
+                                    <div class="relative">
+                                        <div
+                                            class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                            <i class="fas fa-user text-gray-400"></i>
+                                        </div>
+                                        <input type="text" id="nome"
+                                            class="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all"
+                                            placeholder="Digite seu nome completo">
+                                    </div>
+                                </div>
+
+                                <!-- Campo de email com ícone -->
+                                <div class="form-field">
+                                    <label for="email" class="block text-gray-700 font-medium mb-2">Seu melhor
+                                        email</label>
+                                    <div class="relative">
+                                        <div
+                                            class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                            <i class="fas fa-envelope text-gray-400"></i>
+                                        </div>
+                                        <input type="email" id="email"
+                                            class="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all"
+                                            placeholder="Digite seu email">
+                                    </div>
+                                </div>
+
+                                <!-- Campo opcional de telefone -->
+                                <div class="form-field">
+                                    <label for="telefone" class="block text-gray-700 font-medium mb-2">Telefone <span
+                                            class="text-gray-400 text-sm font-normal">(opcional)</span></label>
+                                    <div class="relative">
+                                        <div
+                                            class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                            <i class="fas fa-phone text-gray-400"></i>
+                                        </div>
+                                        <input type="tel" id="telefone"
+                                            class="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all"
+                                            placeholder="(11) 99999-9999">
+                                    </div>
+                                </div>
+
+                                <!-- Termos com estilo melhorado -->
+                                <div class="form-field">
+                                    <div class="flex items-start">
+                                        <div class="flex items-center h-5">
+                                            <input type="checkbox" id="termos"
+                                                class="w-5 h-5 text-blue-600 border-gray-300 rounded focus:ring-blue-500">
+                                        </div>
+                                        <div class="ml-3 text-sm">
+                                            <label for="termos" class="text-gray-700">
+                                                Concordo com os <a href="#"
+                                                    class="text-blue-600 hover:underline font-medium">termos de uso</a>
+                                                e <a href="#" class="text-blue-600 hover:underline font-medium">política
+                                                    de privacidade</a>.
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Botão de submissão aprimorado -->
+                                <button type="submit"
+                                    class="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-bold py-4 px-4 rounded-lg transition-all duration-300 transform hover:scale-[1.02] shadow-lg shine-button">
+                                    <span class="flex items-center justify-center">
+                                        <span class="mr-2">COMEÇAR AGORA</span>
+                                        <i class="fas fa-arrow-right"></i>
+                                    </span>
+                                </button>
+
+                                <!-- Timer de urgência -->
+                                <div class="text-center">
+                                    <div class="text-sm text-gray-600 flex items-center justify-center">
+                                        <i class="fas fa-clock text-blue-600 mr-2"></i>
+                                        <span>Oferta de lançamento expira em:</span>
+                                        <span id="countdown-timer" class="ml-2 font-mono font-bold">23:59:59</span>
+                                    </div>
+                                </div>
+                            </form>
+
+                            <!-- Garantias e selos de segurança -->
+                            <div class="mt-8 pt-6 border-t border-gray-100">
+                                <div class="flex items-center justify-center mb-4">
+                                    <i class="fas fa-shield-alt text-green-500 text-2xl mr-3"></i>
+                                    <div class="text-left">
+                                        <p class="font-medium text-gray-800">Seus dados estão protegidos</p>
+                                        <p class="text-xs text-gray-500">Criptografia SSL de 256 bits</p>
+                                    </div>
+                                </div>
+
+                                <!-- <div class="flex justify-center space-x-4">
+                                    <img src="/api/placeholder/60/30" alt="Pagamento Seguro" class="h-8 opacity-70">
+                                    <img src="/api/placeholder/60/30" alt="Certificado SSL" class="h-8 opacity-70">
+                                    <img src="/api/placeholder/60/30" alt="Proteção de Dados" class="h-8 opacity-70">
+                                </div> -->
+                            </div>
                         </div>
                     </div>
 
-                    <button type="submit"
-                        class="w-full bg-primary hover:bg-blue-600 text-white font-bold py-3 px-4 rounded-lg transition-colors shine-button animated-button" data-aos="fade-up" data-aos-delay="400">Quero
-                        Economizar</button>
-
-                    <div class="mt-4 text-center" data-aos="fade-up" data-aos-delay="500">
-                        <p class="text-gray-500 text-sm">Garantimos a segurança dos seus dados. Não fazemos spam.</p>
+                    <!-- Comentário de cliente abaixo do form -->
+                    <div class="mt-8 bg-white/10 backdrop-blur-md p-4 rounded-xl text-white">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 mr-4">
+                                <div
+                                    class="w-12 h-12 rounded-full bg-yellow-500 flex items-center justify-center text-white font-bold text-lg shadow-md">
+                                    CM
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex items-center mb-1">
+                                    <div class="text-yellow-400 flex mr-2">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <h4 class="font-semibold">Carlos Mendes</h4>
+                                </div>
+                                <p class="text-sm text-blue-100">"Em apenas 2 meses consegui acumular pontos suficientes
+                                    para uma passagem internacional. O sistema realmente encontra oportunidades que eu
+                                    jamais descobriria sozinho."</p>
+                            </div>
+                        </div>
                     </div>
-                </form>
-            </div>
-
-            <div class="max-w-md mx-auto mt-8 flex items-center justify-center" data-aos="fade-up" data-aos-delay="600">
-                <div class="mr-3">
-                    <i class="fas fa-shield-alt text-2xl"></i>
-                </div>
-                <div class="text-sm">
-                    <p>100% Seguro e Confiável</p>
-                    <p>Mais de 10 mil usuários confiam em nosso serviço</p>
                 </div>
             </div>
         </div>
@@ -757,16 +1135,20 @@
                     <p class="text-gray-400 mb-4">Facilitando o acesso às melhores oportunidades de benefícios, milhas e
                         cashback.</p>
                     <div class="flex space-x-4">
-                        <a href="#" class="text-gray-400 hover:text-white transition-colors transform hover:scale-125 duration-300">
+                        <a href="#"
+                            class="text-gray-400 hover:text-white transition-colors transform hover:scale-125 duration-300">
                             <i class="fab fa-facebook-f"></i>
                         </a>
-                        <a href="#" class="text-gray-400 hover:text-white transition-colors transform hover:scale-125 duration-300">
+                        <a href="#"
+                            class="text-gray-400 hover:text-white transition-colors transform hover:scale-125 duration-300">
                             <i class="fab fa-instagram"></i>
                         </a>
-                        <a href="#" class="text-gray-400 hover:text-white transition-colors transform hover:scale-125 duration-300">
+                        <a href="#"
+                            class="text-gray-400 hover:text-white transition-colors transform hover:scale-125 duration-300">
                             <i class="fab fa-linkedin-in"></i>
                         </a>
-                        <a href="#" class="text-gray-400 hover:text-white transition-colors transform hover:scale-125 duration-300">
+                        <a href="#"
+                            class="text-gray-400 hover:text-white transition-colors transform hover:scale-125 duration-300">
                             <i class="fab fa-twitter"></i>
                         </a>
                     </div>
@@ -775,20 +1157,36 @@
                 <div data-aos="fade-up" data-aos-delay="200">
                     <h4 class="font-bold mb-4">Links Rápidos</h4>
                     <ul class="space-y-2">
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors hover:translate-x-2 inline-block transform">Sobre nós</a></li>
-                        <li><a href="#como-funciona" class="text-gray-400 hover:text-white transition-colors hover:translate-x-2 inline-block transform">Como funciona</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors hover:translate-x-2 inline-block transform">Blog</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors hover:translate-x-2 inline-block transform">Contato</a></li>
+                        <li><a href="#"
+                                class="text-gray-400 hover:text-white transition-colors hover:translate-x-2 inline-block transform">Sobre
+                                nós</a></li>
+                        <li><a href="#como-funciona"
+                                class="text-gray-400 hover:text-white transition-colors hover:translate-x-2 inline-block transform">Como
+                                funciona</a></li>
+                        <li><a href="#"
+                                class="text-gray-400 hover:text-white transition-colors hover:translate-x-2 inline-block transform">Blog</a>
+                        </li>
+                        <li><a href="#"
+                                class="text-gray-400 hover:text-white transition-colors hover:translate-x-2 inline-block transform">Contato</a>
+                        </li>
                     </ul>
                 </div>
 
                 <div data-aos="fade-up" data-aos-delay="400">
                     <h4 class="font-bold mb-4">Políticas</h4>
                     <ul class="space-y-2">
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors hover:translate-x-2 inline-block transform">Termos de uso</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors hover:translate-x-2 inline-block transform">Política de privacidade</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors hover:translate-x-2 inline-block transform">Política de cookies</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors hover:translate-x-2 inline-block transform">FAQ</a></li>
+                        <li><a href="#"
+                                class="text-gray-400 hover:text-white transition-colors hover:translate-x-2 inline-block transform">Termos
+                                de uso</a></li>
+                        <li><a href="#"
+                                class="text-gray-400 hover:text-white transition-colors hover:translate-x-2 inline-block transform">Política
+                                de privacidade</a></li>
+                        <li><a href="#"
+                                class="text-gray-400 hover:text-white transition-colors hover:translate-x-2 inline-block transform">Política
+                                de cookies</a></li>
+                        <li><a href="#"
+                                class="text-gray-400 hover:text-white transition-colors hover:translate-x-2 inline-block transform">FAQ</a>
+                        </li>
                     </ul>
                 </div>
 
@@ -818,7 +1216,8 @@
     </footer>
 
     <!-- Botão de voltar ao topo com animação -->
-    <button id="back-to-top" class="fixed bottom-4 right-4 bg-primary text-white rounded-full p-3 shadow-lg opacity-0 invisible transition-all duration-300 z-50 transform hover:scale-110">
+    <button id="back-to-top"
+        class="fixed bottom-4 right-4 bg-primary text-white rounded-full p-3 shadow-lg opacity-0 invisible transition-all duration-300 z-50 transform hover:scale-110">
         <i class="fas fa-arrow-up"></i>
     </button>
 
@@ -826,88 +1225,88 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>
         // Inicialização do AOS
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             AOS.init({
                 duration: 800,
                 easing: 'ease-in-out',
                 once: false,
                 mirror: true
             });
-            
+
             // Criação das partículas
             createParticles();
             createFlyingIcons();
-            
+
             // Iniciar contadores
             startCounters();
-            
+
             // Menu mobile
             setupMobileMenu();
-            
+
             // Botão voltar ao topo
             setupBackToTop();
-            
+
             // Revelar elementos ao scroll
             setupScrollReveal();
-            
+
             // Formulário com animação
             setupFormInteractions();
         });
-        
+
         // Função para criar partículas
         function createParticles() {
             const containers = document.querySelectorAll('.particles-container');
-            
+
             containers.forEach(container => {
                 for (let i = 0; i < 50; i++) {
                     const particle = document.createElement('div');
                     particle.classList.add('particle');
-                    
+
                     // Tamanho aleatório entre 3 e 8px
                     const size = Math.random() * 5 + 3;
                     particle.style.width = `${size}px`;
                     particle.style.height = `${size}px`;
-                    
+
                     // Posição aleatória
                     particle.style.left = `${Math.random() * 100}%`;
                     particle.style.top = `${Math.random() * 100}%`;
-                    
+
                     // Opacidade aleatória
                     particle.style.opacity = Math.random() * 0.5 + 0.1;
-                    
+
                     // Animação com duração e delay aleatórios
                     const duration = Math.random() * 20 + 10;
                     const delay = Math.random() * 10;
-                    
+
                     particle.style.animation = `float ${duration}s ease-in-out ${delay}s infinite`;
-                    
+
                     container.appendChild(particle);
                 }
             });
         }
-        
+
         // Criação de ícones flutuantes
         function createFlyingIcons() {
             const container = document.querySelector('.flying-icons');
             const icons = container.querySelectorAll('.flying-icon');
-            
+
             icons.forEach(icon => {
                 // Posição horizontal aleatória
                 const left = Math.random() * 100;
                 icon.style.left = `${left}%`;
-                
+
                 // Tamanho inicial
                 const scale = Math.random() * 0.5 + 0.5;
                 icon.style.transform = `scale(${scale})`;
-                
+
                 // Duração e delay aleatórios
                 const duration = Math.random() * 15 + 20;
                 const delay = Math.random() * 5;
-                
+
                 icon.style.animation = `fly ${duration}s linear ${delay}s infinite`;
             });
         }
-        
+
         // Contador animado
         function startCounters() {
             const counters = [
@@ -916,23 +1315,23 @@
                 { id: 'counter3', start: 0, end: 45, suffix: '+' },
                 { id: 'counter4', start: 0, end: 98, suffix: '%' }
             ];
-            
+
             const options = {
                 threshold: 0.8
             };
-            
+
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
                         counters.forEach(counter => {
                             const element = document.getElementById(counter.id);
                             if (!element) return;
-                            
+
                             let current = counter.start;
                             const increment = (counter.end - counter.start) / 40;
                             const duration = 2000;
                             const stepTime = duration / 40;
-                            
+
                             const updateCounter = () => {
                                 current += increment;
                                 if (current < counter.end) {
@@ -950,21 +1349,21 @@
                                     }
                                 }
                             };
-                            
+
                             updateCounter();
                         });
-                        
+
                         observer.unobserve(entry.target);
                     }
                 });
             }, options);
-            
+
             const statsSection = document.querySelector('.bg-gray-900.text-white');
             if (statsSection) {
                 observer.observe(statsSection);
             }
         }
-        
+
         // Setup do menu mobile
         function setupMobileMenu() {
             const menuBtn = document.getElementById('mobile-menu-button');
@@ -972,21 +1371,21 @@
             const menu = document.getElementById('mobile-menu');
             const overlay = document.getElementById('menu-overlay');
             const menuLinks = menu.querySelectorAll('a');
-            
+
             if (menuBtn && closeBtn && menu && overlay) {
                 menuBtn.addEventListener('click', () => {
                     menu.classList.add('open');
                     overlay.classList.add('open');
                     document.body.style.overflow = 'hidden';
                 });
-                
+
                 closeBtn.addEventListener('click', closeMenu);
                 overlay.addEventListener('click', closeMenu);
-                
+
                 menuLinks.forEach(link => {
                     link.addEventListener('click', closeMenu);
                 });
-                
+
                 function closeMenu() {
                     menu.classList.remove('open');
                     overlay.classList.remove('open');
@@ -994,11 +1393,11 @@
                 }
             }
         }
-        
+
         // Botão voltar ao topo
         function setupBackToTop() {
             const backToTopBtn = document.getElementById('back-to-top');
-            
+
             if (backToTopBtn) {
                 window.addEventListener('scroll', () => {
                     if (window.pageYOffset > 300) {
@@ -1009,7 +1408,7 @@
                         backToTopBtn.classList.add('invisible');
                     }
                 });
-                
+
                 backToTopBtn.addEventListener('click', () => {
                     window.scrollTo({
                         top: 0,
@@ -1018,17 +1417,17 @@
                 });
             }
         }
-        
+
         // Revelação de elementos ao scroll
         function setupScrollReveal() {
             const revealElements = document.querySelectorAll('.reveal');
-            
-            const revealOnScroll = function() {
+
+            const revealOnScroll = function () {
                 for (let i = 0; i < revealElements.length; i++) {
                     const windowHeight = window.innerHeight;
                     const elementTop = revealElements[i].getBoundingClientRect().top;
                     const elementVisible = 150;
-                    
+
                     if (elementTop < windowHeight - elementVisible) {
                         revealElements[i].classList.add("active");
                     } else {
@@ -1036,42 +1435,42 @@
                     }
                 }
             };
-            
+
             window.addEventListener("scroll", revealOnScroll);
             revealOnScroll();
         }
-        
+
         // Interações do formulário
         function setupFormInteractions() {
             const form = document.getElementById('signup-form');
             const inputs = form.querySelectorAll('input');
-            
+
             inputs.forEach(input => {
-                input.addEventListener('focus', function() {
+                input.addEventListener('focus', function () {
                     this.parentElement.classList.add('scale-105');
                     this.parentElement.style.transition = 'all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55)';
                 });
-                
-                input.addEventListener('blur', function() {
+
+                input.addEventListener('blur', function () {
                     this.parentElement.classList.remove('scale-105');
                 });
             });
-            
-            form.addEventListener('submit', function(e) {
+
+            form.addEventListener('submit', function (e) {
                 e.preventDefault();
-                
+
                 // Adicionar efeito de loading
                 const submitBtn = form.querySelector('button[type="submit"]');
                 const originalText = submitBtn.textContent;
-                
+
                 submitBtn.innerHTML = '<div class="loading-spinner inline-block w-4 h-4 border-2 border-t-transparent rounded-full animate-spin mr-2"></div> Processando...';
-                
+
                 // Simular envio (remover em produção)
                 setTimeout(() => {
                     submitBtn.textContent = '✓ Cadastro concluído!';
                     submitBtn.classList.remove('bg-primary');
                     submitBtn.classList.add('bg-green-500');
-                    
+
                     // Resetar após 3 segundos
                     setTimeout(() => {
                         submitBtn.textContent = originalText;
@@ -1082,12 +1481,12 @@
                 }, 1500);
             });
         }
-        
+
         // Atualizar countdowns
         function updateCountdown() {
             const countdownEl = document.getElementById('countdown');
             if (!countdownEl) return;
-            
+
             let parts = countdownEl.textContent.split(':');
             let hours = parseInt(parts[0]);
             let minutes = parseInt(parts[1]);
@@ -1111,12 +1510,113 @@
 
             countdownEl.textContent = `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
         }
-        
+
         // Animação de wave para SVG
         const waveAnimation = document.querySelector('.wave-animation');
         if (waveAnimation) {
             waveAnimation.style.animation = 'wave 5s ease-in-out infinite alternate';
         }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const counterObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const counters = entry.target.querySelectorAll('.counter-value');
+                        counters.forEach(counter => {
+                            const target = parseFloat(counter.getAttribute('data-target'));
+                            const decimal = target.toString().includes('.');
+                            const duration = 2000; // ms
+                            const steps = 50;
+                            const increment = target / steps;
+
+                            let current = 0;
+                            const timer = setInterval(() => {
+                                current += increment;
+                                if (current >= target) {
+                                    counter.textContent = decimal ? target.toFixed(1) : target;
+                                    clearInterval(timer);
+                                } else {
+                                    counter.textContent = decimal ? current.toFixed(1) : Math.floor(current);
+                                }
+                            }, duration / steps);
+                        });
+                        counterObserver.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            // Observar a seção de números
+            const counterSection = document.querySelector('.counter-item').closest('[data-aos="zoom-in"]');
+            if (counterSection) {
+                counterObserver.observe(counterSection);
+            }
+
+            function startCountdown() {
+                const countdownElement = document.getElementById('countdown-timer');
+                if (!countdownElement) return;
+
+                // Define o tempo inicial (24h)
+                let hours = 23;
+                let minutes = 59;
+                let seconds = 59;
+
+                const updateCountdown = () => {
+                    countdownElement.textContent = `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+
+                    if (seconds > 0) {
+                        seconds--;
+                    } else {
+                        seconds = 59;
+                        if (minutes > 0) {
+                            minutes--;
+                        } else {
+                            minutes = 59;
+                            if (hours > 0) {
+                                hours--;
+                            } else {
+                                // Quando chegar a zero, reinicia para manter o senso de urgência
+                                hours = 23;
+                                minutes = 59;
+                                seconds = 59;
+                            }
+                        }
+                    }
+                };
+
+                // Atualiza o contador a cada segundo
+                updateCountdown();
+                setInterval(updateCountdown, 1000);
+            }
+
+            // Iniciar o contador
+            startCountdown();
+
+            // Comportamento do formulário
+            const form = document.getElementById('signup-form');
+            if (form) {
+                form.addEventListener('submit', function (e) {
+                    e.preventDefault();
+
+                    // Adicionar efeito de loading ao botão
+                    const submitBtn = this.querySelector('button[type="submit"]');
+                    const originalContent = submitBtn.innerHTML;
+
+                    submitBtn.innerHTML = '<div class="inline-flex items-center"><svg class="animate-spin -ml-1 mr-2 h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg> Processando...</div>';
+
+                    // Simular envio (remover em produção e substituir por seu código real de envio de formulário)
+                    setTimeout(() => {
+                        submitBtn.innerHTML = '<span class="flex items-center justify-center"><i class="fas fa-check mr-2"></i> Cadastro realizado com sucesso!</span>';
+                        submitBtn.classList.remove('from-blue-600', 'to-indigo-600');
+                        submitBtn.classList.add('from-green-500', 'to-green-600');
+
+                        // Exibir mensagem de sucesso (opcional)
+                        setTimeout(() => {
+                            // Adicione aqui o redirecionamento ou exibição de mensagem adicional
+                        }, 1500);
+                    }, 2000);
+                });
+            }
+        })
     </script>
 
     <style>
@@ -1125,25 +1625,83 @@
             0% {
                 transform: translateY(0);
             }
+
             100% {
                 transform: translateY(10px);
             }
         }
-        
+
         /* Animação de flutuação para partículas */
         @keyframes float {
-            0%, 100% {
+
+            0%,
+            100% {
                 transform: translateY(0) translateX(0);
             }
+
             25% {
                 transform: translateY(-15px) translateX(15px);
             }
+
             50% {
                 transform: translateY(-25px) translateX(0);
             }
+
             75% {
                 transform: translateY(-15px) translateX(-15px);
             }
+        }
+
+        @keyframes animate-gradient-x {
+
+            0%,
+            100% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+        }
+
+        .animate-gradient-x {
+            background-size: 200% 200%;
+            animation: animate-gradient-x 15s ease infinite;
+        }
+
+        .bg-pattern {
+            background-image: radial-gradient(circle, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+
+        .animation-delay-2000 {
+            animation-delay: 2s;
+        }
+
+        .animation-delay-4000 {
+            animation-delay: 4s;
+        }
+
+        @keyframes blob {
+            0% {
+                transform: translate(0px, 0px) scale(1);
+            }
+
+            33% {
+                transform: translate(30px, -50px) scale(1.1);
+            }
+
+            66% {
+                transform: translate(-20px, 20px) scale(0.9);
+            }
+
+            100% {
+                transform: translate(0px, 0px) scale(1);
+            }
+        }
+
+        .animate-blob {
+            animation: blob 7s infinite;
         }
     </style>
 </body>
